@@ -203,13 +203,9 @@ main_menu() {
 	{ clear; echo; }
 	cat <<- EOF
 
-		${BLUE}		
-		${BLUE}	░█████╗░██╗░░░░░██╗░█████╗░███████╗
-			${BLUE} ██╔══██╗██║░░░░░██║██╔══██╗╚════██║
-			${BLUE} ███████║██║░░░░░██║███████║░░███╔═╝
-		${BLUE}	██╔══██║██║██╗░░██║██╔══██║██╔══╝░░
-		${BLUE}	██║░░██║██║╚█████╔╝██║░░██║███████╗
-		${BLUE}	╚═╝░░╚═╝╚═╝░╚════╝░╚═╝░░╚═╝╚══════╝${WHITE} 1.3
+	${Blue}			
+	${Blue}	▄▀█ █ ░░█ ▄▀█ ▀█
+	${Blue}	█▀█ █ █▄█ █▀█ █▄${WHITE} 1.3
 
 		${GREEN}Author   ${RED}:  ${ORANGE}MOHAMMAD AIJAZ
 		${GREEN}Github   ${RED}:  ${CYAN}https://github.com/Aijazmakerb
@@ -217,7 +213,7 @@ main_menu() {
 
 	EOF
 	
-	start_ngrok "ngrok" "Launching Ngrok... Turn on your private Hotspot (It will not work without Hotspot)..."
+	start_ngrok "ngrok" "Launching Ngrok... Turn on your private Hotspot..."
 }
 
 ## Main
