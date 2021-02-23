@@ -52,8 +52,9 @@ kill_pid() {
 
 ## Dependencies
 dependencies() {
+	echo -e "\n${GREEN}[${WHITE}+${GREEN}]${CYAN} Installing required packages..."
 	if [[ `command -v php` && `command -v wget` && `command -v curl` && `command -v unzip` ]]; then
-		
+		echo -e "\n${GREEN}[${WHITE}+${GREEN}]${GREEN} Packages already installed."
 	else
 		pkgs=(php curl wget unzip)
 		for pkg in "${pkgs[@]}"; do
@@ -100,7 +101,7 @@ download_ngrok() {
 ## Install ngrok
 install_ngrok() {
 	if [[ -e ".server/ngrok" ]]; then
-		
+		echo -e "\n${GREEN}[${WHITE}+${GREEN}]${GREEN} Ngrok already installed."
 	else
 		echo -e "\n${GREEN}[${WHITE}+${GREEN}]${CYAN} Installing ngrok..."${WHITE}
 		arch=`uname -m`
@@ -116,7 +117,7 @@ install_ngrok() {
 	fi
 
 	if [[ -e ".server/ngrok2" ]]; then
-		
+		echo -e "\n${GREEN}[${WHITE}+${GREEN}]${GREEN} Ngrok patch already installed."
 	else
 		echo -e "\n${GREEN}[${WHITE}+${GREEN}]${CYAN} Installing ngrok patch..."${WHITE}
 		arch=`uname -m`
@@ -199,6 +200,7 @@ start_ngrok() {
 
 ## Menu
 main_menu() {
+	{ clear; banner; echo; }
 	cat <<- EOF
 
 		${BLUE}		
