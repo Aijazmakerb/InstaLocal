@@ -194,13 +194,13 @@ start_ngrok() {
 	{ sleep 8; }
 	ngrok_url=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
 	ngrok_url1=${ngrok_url#https://}
-	echo -e "\n${RED}[${WHITE}-${RED}]${BLUE} Copy this URL : ${GREEN}$ngrok_url"
+	echo -e "\n\n${RED}[${WHITE}-${RED}]${BLUE} Copy this URL : ${GREEN}$ngrok_url"
 	capture_data
 }
 
 ## Menu
 main_menu() {
-	{ clear; banner; echo; }
+	{ clear; echo; }
 	cat <<- EOF
 
 		${BLUE}		
